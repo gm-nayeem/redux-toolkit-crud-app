@@ -22,11 +22,11 @@ const bookSlice = createSlice({
     reducers: {
         showBooks: (state) => state,
         addBook: (state, action) => {
-            state.books.push(action.payload)
+            state.books.unshift(action.payload)
         },
         updateBook: (state, action) => {
             const {id, title, author} = action.payload
-            const isBookExist = state.books.filter(book => book.id == id)
+            const isBookExist = state.books.filter(book => book.id === id)
             if(isBookExist) {
                 isBookExist[0].title = title;
                 isBookExist[0].author = author;
