@@ -39,7 +39,7 @@ const EditBook = () => {
             required
           />
         </div>
-        <button type="submit" style={{width: ".5rem"}}>Update Book</button>
+        <button type="submit">Update Book</button>
       </form>
     </div>
   )

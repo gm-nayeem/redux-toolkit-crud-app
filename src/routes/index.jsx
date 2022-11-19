@@ -4,6 +4,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // navbar
 import Navbar from '../layouts/Navbar'
 
+// footer
+import Footer from '../layouts/Footer'
+
 // books
 import AddBook from '../features/books/AddBook'
 import EditBook from '../features/books/EditBook'
@@ -26,6 +29,7 @@ const Index = () => {
           <Route path='*' element={<Error />} />
         </Routes>
       </main>
+      <Footer />
     </BrowserRouter>
   )
 }
