@@ -10,7 +10,7 @@ const EditBook = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const {id} = location.state
+  const id = location.state.id
   //const [id, _] = useState(location.state.id)
   const [title, setTitle] = useState(location.state.title)
   const [author, setAuthor] = useState(location.state.author)
@@ -23,7 +23,7 @@ const EditBook = () => {
 
   return (
     <div>
-      <h2>Edit Book</h2>
+      <h2>Update Book</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="title">Title: </label>
@@ -39,7 +39,7 @@ const EditBook = () => {
             required
           />
         </div>
-        <button type="submit">Update Book</button>
+        <button type="submit" style={{width: ".5rem"}}>Update Book</button>
       </form>
     </div>
   )
